@@ -1,0 +1,9 @@
+__pycache__/
+*.egg-info/
+.ruff_cache/
+figures/
+simulations*/
+simulations
+simulation-queue.dat
+.stop-file
+improve-lambda-out/

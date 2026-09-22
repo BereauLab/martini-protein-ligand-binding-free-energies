@@ -1,0 +1,47 @@
+[build-system]
+requires = ["setuptools >= 77.0.3"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cgbfe"
+version = "1.0.0"
+description = "Coarse-grained absolute binding free energies with Martini 3"
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [
+    {name = "Luis Walter", email = "walter@thphys.uni-heidelberg.de"},
+]
+dependencies = [
+    "alchemlyb==2.5.0",
+    "fast_forward @ git+https://github.com/fgrunewald/fast_forward.git",
+    "freesasa",
+    "insane==1.2.0",
+    "matplotlib",
+    "MDAnalysis>=2.9",
+    "mdtraj==1.10.3",
+    "numpy",
+    "omegaconf",
+    "openmm",
+    "pandas",
+    "plip",
+    "pymbar>=4.0",
+    "rdkit",
+    "requests",
+    "scikit-learn",
+    "scipy",
+    "typer",
+    "urllib3",
+    "vermouth==0.15.0",
+]
+
+[project.scripts]
+cgbfe-run-file-queue = "cgbfe.file_queue:run_simulations_from_queue"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+extend-exclude = ["external"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["cgbfe", "helper"]

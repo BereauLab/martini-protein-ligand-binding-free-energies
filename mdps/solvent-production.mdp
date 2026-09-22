@@ -1,0 +1,57 @@
+; General setup
+integrator               = sd
+dt                       = 0.02
+nsteps                   = 120000
+comm-mode                = Linear
+; Output
+nstxout                  = 0
+nstvout                  = 0
+nstfout                  = 0
+nstlog                   = 100000
+nstcalcenergy            = 50
+nstenergy                = 100000
+nstxout-compressed       = 10000
+; Non-bonded interactions
+verlet-buffer-tolerance  = -1
+nstlist                  = 20
+rlist                    = 1.35
+coulombtype              = Reaction-Field
+rcoulomb                 = 1.1
+epsilon-r                = 15
+epsilon-rf               = 0
+vdwtype                  = Cut-off
+vdw-modifier             = Potential-shift
+rvdw                     = 1.1
+; Temperature control
+tau-t                    = 2.0
+ref-t                    = 300
+tc-grps                  = system
+nsttcouple               = 20
+; Pressure control
+pcoupl                   = c-rescale
+pcoupltype               = isotropic
+tau-p                    = 4.0
+ref-p                    = 1.0
+compressibility          = 3e-4
+nstpcouple               = 20
+; Constraints
+continuation             = yes
+; Boundary conditions
+pbc                      = xyz
+; Constraints
+lincs-order              = 8
+lincs-iter               = 2
+lincs-warnangle          = 90
+; Free energy calculation
+free-energy              = yes
+couple-moltype           = ligand
+nstdhdl                  = 100
+sc-alpha                 = 0.5
+sc-power                 = 1
+sc-sigma                 = 0.3
+couple-intramol          = yes
+couple-lambda0           = vdw-q
+couple-lambda1           = q
+init-lambda-state        = 25
+vdw-lambdas              = 0.00000 0.08450 0.16900 0.25350 0.33800 0.41000 0.46200 0.51800 0.56182 0.59254 0.62327 0.65400 0.68473 0.71781 0.74855 0.77927 0.81000 0.86417 0.91833 1.00000
+calc-lambda-neighbors    = -1

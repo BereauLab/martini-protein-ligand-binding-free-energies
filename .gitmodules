@@ -1,0 +1,9 @@
+[submodule "external/OLIVES"]
+	path = external/OLIVES
+	url = https://github.com/Martini-Force-Field-Initiative/OLIVES.git
+[submodule "external/M3-Small-Molecules"]
+	path = external/M3-Small-Molecules
+	url = https://github.com/Martini-Force-Field-Initiative/M3-Small-Molecules.git
+[submodule "external/IndustryBenchmarks2024"]
+	path = external/IndustryBenchmarks2024
+	url = https://github.com/OpenFreeEnergy/IndustryBenchmarks2024.git
