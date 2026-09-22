@@ -2,8 +2,15 @@ __pycache__/
 *.egg-info/
 .ruff_cache/
 figures/
-simulations*/
-simulations
 simulation-queue.dat
 .stop-file
 improve-lambda-out/
+
+# of the simulations only the input files of each system are tracked
+simulations/*/*
+!simulations/*/mapping.ndx
+!simulations/*/ligand.gro
+!simulations/*/ligand.itp
+!simulations/*/ligand-neutral.itp
+!simulations/*/data.json
+!simulations/*/info.json

@@ -1,0 +1,65 @@
+; This file was generated using the following command:
+; /remote/au011/walter/programs/uvenv-ml/bin/ff_inter -f mapped.xtc -s mapped.tpr -i ../mapping.itp -temperature 298 -interactions comments -dists -plots -constraints 10000000 -max-dihedral 3
+; 
+
+; Please cite the following papers:
+; {Brasnett, C; Fidlin, M; Duve, T; Thallmair, S; Marrink, S J; Grünewald, F;   {ChemRxiv  {2026;  {10.26434/chemrxiv.15001072/v1
+; Kroon, P C; Grunewald, F; Barnoud, J; van Tilburg, M; Souza, P C; Wassenaar, T A; Marrink, S J;  elife 2024; 10.7554/elife.90627.2
+
+[ moleculetype ]
+ligand 1
+
+[ atoms ]
+ 1 TN6d 1 LIG B1   1 0.0 48.0
+ 2 TN3  1 LIG B2   2 0.0 48.0
+ 3 TC5  1 LIG B3   3 0.0  0.0
+ 4 TC5  1 LIG B4   4 0.0 48.0
+ 5 TC5  1 LIG B5   5 0.0 36.0
+ 6 TC5  1 LIG B6   6 0.0 36.0
+ 7 TC5  1 LIG B7   7 0.0 36.0
+ 8 TC5  1 LIG B8   8 0.0 36.0
+ 9 P3   1 LIG B9   9 0.0 72.0
+10 SC2  1 LIG B10 10 0.0 54.0
+
+[ bonds ]
+  1   5  1 0.501    25000.000 ; bond5 (91929.248)
+  2   4  1 0.404    25000.000 ; bond4 (131659.507)
+  4   6  1 0.221    25000.000 ; bond2 (97057.329)
+  8   9  1 0.248    25000.000 ; bond1 (69282.428)
+  9  10  1 0.297     13487.51 ; bond3
+
+[ constraints ]
+ 1  2 1 0.329 100000
+ 1  4 1 0.437 100000
+ 2  5 1 0.330 100000
+ 4  5 1 0.215 100000
+ 6  7 1 0.225 100000
+ 6  8 1 0.190 100000
+ 7  8 1 0.221 100000
+
+[ angles ]
+  1   4   6  2 126.691     74.965 ; angle7
+  5   4   6  2 133.195     90.694 ; angle1
+  4   6   7  2 146.198    155.743 ; angle2
+  4   6   8  2 149.600    188.238 ; angle3
+  6   8   9  2 154.868    267.233 ; angle4
+  7   8   9  2 138.839     111.27 ; angle5
+  8   9  10  2 107.485     17.945 ; angle6
+
+[ dihedrals ]
+; dihedral1
+ 5  4  6  8 11 1.0 166.59 -27.145 -346.394 22.329 286.114 ; dihedral1
+
+[ virtual_sites3 ]
+ 3  4  1  2 4 0.313114 0.116081 -0.022055
+
+[ exclusions ]
+ 1  2  3  4  5  6  7  8 
+ 2  3  4  5  6  7  8 
+ 3  4  5  6  7  8  9 
+ 4  5  6  7  8  9 10 
+ 5  6  7  8  9 
+ 6  7  8  9 10 
+ 7  8  9 10 
+ 8  9 10 
+ 9 10 

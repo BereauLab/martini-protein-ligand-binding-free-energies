@@ -1,6 +1,6 @@
 # Coarse-grained absolute protein-ligand binding free energies
 
-Code for computing absolute protein-ligand binding free energies with the Martini 3 coarse-grained force field. The simulation data itself is not part of this repository.
+Code for computing absolute protein-ligand binding free energies with the Martini 3 coarse-grained force field. The repository also includes coarse-grained topologies and the computed free energies of every system.
 
 ## Installation
 
@@ -27,8 +27,9 @@ The logP reference values additionally need the ALOGPS command line tool from [o
 | `mdps`              | GROMACS parameter files of all simulation stages                 |
 | `analysis`          | Analysis scripts                                                 |
 | `external`          | Submodules with the benchmark and the force field resources      |
+| `simulations`       | Input files and free energies of every simulated system          |
 
-The simulation data is stored in `simulations`, one directory per ligand named by `<target>_<ligand>`.
+Every system directory in `simulations` is named `<target>_<ligand>` and holds the coarse-grained ligand (`ligand.gro`, `ligand.itp`), its bead mapping (`mapping.ndx`), the neutral topology of the charged ligands (`ligand-neutral.itp`), the reference data of the benchmark (`data.json`) and the free energies of all repeats (`info.json`).
 
 ## Workflow
 
@@ -43,7 +44,7 @@ python simulation-setup/prepare-ligands.py atomistic # Fetch topologies from Lig
 python simulation-setup/prepare-ligands.py reference # Run simulations
 ```
 
-3. Manually create mapping.ndx and mapping.itp files for the coarse-grained ligands
+3. Manually create the `mapping.ndx` and `mapping.itp` of every coarse-grained ligand. The `mapping.ndx` files used here are included in `simulations`.
 
 4. Compute bonded parameters with fast-forward:
 ```bash
@@ -55,7 +56,7 @@ python simulation-setup/prepare-ligands.py fast-forward
 python simulation-setup/simulate.py run
 ```
 
-6. Manually create `oco-w/ligand.gro` and `oco-w/ligand.itp` in every system directory, holding the neutral form of the ligand. The structure is a copy of `ligand.gro` and the topology is `ligand.itp` with the charged beads replaced by their neutral counterparts.
+6. Manually create `oco-w/ligand.gro` and `oco-w/ligand.itp` in every system directory, holding the neutral form of the ligand. The structure is a copy of `ligand.gro` and the topology is `ligand.itp` with the charged beads replaced by their neutral counterparts, which is included as `ligand-neutral.itp` for every charged ligand.
 
 7. Compute partitioning data:
 ```bash

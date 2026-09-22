@@ -1,0 +1,74 @@
+; This file was generated using the following command:
+; /remote/au011/walter/programs/uvenv-ml/bin/ff_inter -f mapped.xtc -s mapped.tpr -i ../mapping.itp -temperature 298 -interactions comments -dists -plots -constraints 10000000 -max-dihedral 3
+; 
+
+; Please cite the following papers:
+; Kroon, P C; Grunewald, F; Barnoud, J; van Tilburg, M; Souza, P C; Wassenaar, T A; Marrink, S J;  elife 2024; 10.7554/elife.90627.2
+; {Brasnett, C; Fidlin, M; Duve, T; Thallmair, S; Marrink, S J; Grünewald, F;   {ChemRxiv  {2026;  {10.26434/chemrxiv.15001072/v1
+
+[ moleculetype ]
+ligand 1
+
+[ atoms ]
+ 1 SN4ah 1 LIG B1   1 0.0 54.0
+ 2 SC3   1 LIG B2   2 0.0 54.0
+ 3 TN6d  1 LIG B3   3 0.0 48.0
+ 4 TN6a  1 LIG B4   4 0.0  0.0
+ 5 TN6a  1 LIG B5   5 0.0 72.0
+ 6 TC5   1 LIG B6   6 0.0  0.0
+ 7 TN2   1 LIG B7   7 0.0 72.0
+ 8 TN6a  1 LIG B8   8 0.0  0.0
+ 9 TN2a  1 LIG B9   9 0.0 60.0
+10 TC5   1 LIG B10 10 0.0 36.0
+11 TC5   1 LIG B11 11 0.0 36.0
+12 SX4   1 LIG B12 12 0.0 54.0
+
+[ bonds ]
+  1   2  1 0.229    25000.000 ; bond1 (198651.343)
+  2   3  1 0.252    25000.000 ; bond2 (74223.244)
+  3   9  1 0.671    25000.000 ; bond4 (60483.181)
+  9  10  1 0.216    25000.000 ; bond3 (113838.539)
+
+[ constraints ]
+ 3  5 1 0.308 100000
+ 3  7 1 0.497 100000
+ 5  7 1 0.517 100000
+ 5  9 1 0.469 100000
+ 7  9 1 0.433 100000
+10 11 1 0.222 100000
+10 12 1 0.228 100000
+11 12 1 0.257 100000
+
+[ angles ]
+  1   2   3  2  90.123     48.202 ; angle1
+  2   3   5  2 156.850    311.869 ; angle2
+  2   3   7  2  82.541     49.028 ; angle7
+  5   9  10  2 117.770     61.567 ; angle5
+  7   9  10  2 131.578     64.802 ; angle6
+  9  10  11  2 142.318    107.641 ; angle3
+  9  10  12  2 146.801    122.151 ; angle4
+
+[ dihedrals ]
+; dihedral1
+ 2  3  7  9 11 1.0 38.573 15.48 0.322 10.732 -12.22 ; dihedral1
+
+; dihedral2
+ 5  9 10 11 11 1.0 32.571 -23.201 -34.86 24.75 43.808 ; dihedral2
+
+[ virtual_sites3 ]
+ 4  3  7  5 4 0.483070 0.346422 -0.009861
+ 6  5  9  7 4 0.559622 -0.066371 -0.002253
+ 8  9  7  5 4 0.514719 -0.196186 0.011671
+
+[ exclusions ]
+ 1  2  3  4  5  6  7 
+ 2  3  4  5  6  7  8  9 
+ 3  4  5  6  7  8  9 10 
+ 4  5  6  7  8  9 10 
+ 5  6  7  8  9 10 11 12 
+ 6  7  8  9 10 11 12 
+ 7  8  9 10 11 12 
+ 8  9 10 11 12 
+ 9 10 11 12 
+10 11 12 
+11 12 

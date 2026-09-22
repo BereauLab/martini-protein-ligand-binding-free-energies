@@ -1,0 +1,68 @@
+; This file was generated using the following command:
+; /remote/au011/walter/programs/uvenv-ml/bin/ff_inter -f mapped.xtc -s mapped.tpr -i ../mapping.itp -temperature 298 -interactions comments -dists -plots -constraints 10000000 -max-dihedral 3
+; 
+
+; Please cite the following papers:
+; Kroon, P C; Grunewald, F; Barnoud, J; van Tilburg, M; Souza, P C; Wassenaar, T A; Marrink, S J;  elife 2024; 10.7554/elife.90627.2
+; {Brasnett, C; Fidlin, M; Duve, T; Thallmair, S; Marrink, S J; Grünewald, F;   {ChemRxiv  {2026;  {10.26434/chemrxiv.15001072/v1
+
+[ moleculetype ]
+ligand 1
+
+[ atoms ]
+ 1 SC2   1 LIG B1   1 0.0 54.0
+ 2 TC5  1 LIG B2   2 0.0 84.0
+ 3 TC5  1 LIG B3   3 0.0  0.0
+ 4 TC5  1 LIG B4   4 0.0  0.0
+ 5 SN6  1 LIG B5   5 0.0 54.0
+ 6 TC5  1 LIG B6   6 0.0 36.0
+ 7 TC5  1 LIG B7   7 0.0 36.0
+ 8 TN4  1 LIG B8   8 0.0 84.0
+ 9 TN5r 1 LIG B9   9 0.0 84.0
+10 TC2  1 LIG B10 10 0.0  0.0
+11 TC3  1 LIG B11 11 0.0  0.0
+
+[ bonds ]
+  1   2  1 0.253    25000.000 ; bond1 (93380.031)
+  6   8  1 0.33     17623.999 ; bond2
+  7   8  1 0.324    14161.309 ; bond3
+
+[ constraints ]
+ 2  8 1 0.445 100000
+ 2  9 1 0.538 100000
+ 5  6 1 0.271 100000
+ 5  7 1 0.279 100000
+ 6  7 1 0.289 100000
+ 8  9 1 0.434 100000
+
+[ angles ]
+  1   2   8  2 173.800   4132.596 ; angle5
+  1   2   9  2 118.541     62.461 ; angle4
+  5   6   8  2 117.133      60.86 ; angle1
+  2   8   6  2 137.611    106.057 ; angle3
+  7   8   9  2 100.533     49.868 ; angle2
+
+[ dihedrals ]
+; dihedral1
+ 5  7  8  9 11 1.0 10.095 18.862 -10.034 -18.251 17.099 ; dihedral1
+
+; dihedral2
+ 1  2  9  8 11 1.0 104.913 47.514 -7.894 24.345 -22.885 ; dihedral2
+
+[ virtual_sites3 ]
+ 3  2  8  9 4 0.135436 0.230708 -0.197579
+ 4  2  9  8 4 -0.371081 0.600534 -0.167006
+10  9  8  2 4 0.559604 -0.383998 0.757865
+11  9  2  8 4 0.173947 0.375795 -0.868078
+
+[ exclusions ]
+ 1  2  3  4  8  9 10 11 
+ 2  3  4  6  7  8  9 10 11 
+ 3  4  5  6  7  8  9 10 11 
+ 4  5  6  7  8  9 10 11 
+ 5  6  7  8 10 11 
+ 6  7  8  9 10 11 
+ 7  8  9 10 11 
+ 8  9 10 11 
+ 9 10 11 
+10 11 

@@ -1,0 +1,87 @@
+; This file was generated using the following command:
+; /remote/au011/walter/programs/uvenv-ml/bin/ff_inter -f mapped.xtc -s mapped.tpr -i ../mapping.itp -temperature 298 -interactions comments -dists -plots -constraints 10000000 -max-dihedral 3
+; 
+
+; Please cite the following papers:
+; Kroon, P C; Grunewald, F; Barnoud, J; van Tilburg, M; Souza, P C; Wassenaar, T A; Marrink, S J;  elife 2024; 10.7554/elife.90627.2
+; {Brasnett, C; Fidlin, M; Duve, T; Thallmair, S; Marrink, S J; Grünewald, F;   {ChemRxiv  {2026;  {10.26434/chemrxiv.15001072/v1
+
+[ moleculetype ]
+ligand 1
+
+[ atoms ]
+ 1 TN6  1 LIG B1   1 0.0 60.0
+ 2 TC4  1 LIG B2   2 0.0 60.0
+ 3 TC5  1 LIG B3   3 0.0  0.0
+ 4 TC5  1 LIG B4   4 0.0  0.0
+ 5 TC5  1 LIG B5   5 0.0 48.0
+ 6 TN6a 1 LIG B6   6 0.0 48.0
+ 7 SX4  1 LIG B7   7 0.0 54.0
+ 8 SN3a  1 LIG B8   8 0.0 54.0
+ 9 TC5  1 LIG B9   9 0.0 36.0
+10 TC5  1 LIG B10 10 0.0 36.0
+11 TC5  1 LIG B11 11 0.0 36.0
+12 TC5  1 LIG B12 12 0.0 36.0
+13 TN6a 1 LIG B13 13 0.0 36.0
+14 TN2  1 LIG B14 14 0.0 36.0
+
+[ bonds ]
+  1   6  1 0.62     25000.000 ; bond8 (49073.182)
+  2   5  1 0.556    25000.000 ; bond7 (57332.196)
+  2   9  1 0.328    25000.000 ; bond1 (93346.217)
+  2  10  1 0.328    25000.000 ; bond2 (65970.124)
+  6   8  1 0.244    25000.000 ; bond3 (111964.327)
+  7   8  1 0.176    25000.000 ; bond5 (123125.115)
+ 11  12  1 0.259    25000.000 ; bond4 (80235.501)
+ 11  13  1 0.332    25000.000 ; bond6 (72717.421)
+
+[ constraints ]
+ 1  2 1 0.324 100000
+ 1  5 1 0.376 100000
+ 2  6 1 0.644 100000
+ 5  6 1 0.349 100000
+ 9 10 1 0.288 100000
+ 9 11 1 0.214 100000
+10 11 1 0.214 100000
+12 13 1 0.251 100000
+12 14 1 0.280 100000
+13 14 1 0.335 100000
+
+[ angles ]
+  1   2  10  2 112.212     24.991 ; angle1
+  6   2   9  2  64.761     58.913 ; angle7
+  2   6   8  2  84.474     48.653 ; angle8
+  5   6   8  2 104.990     23.435 ; angle9
+  6   8   7  2 163.130    572.357 ; angle2
+  2  10  11  2 110.582     54.999 ; angle3
+  9  11  12  2 110.791     55.151 ; angle4
+ 10  11  12  2 157.673    333.999 ; angle5
+ 11  12  14  2 159.710    400.846 ; angle6
+
+[ dihedrals ]
+; dihedral1
+ 1  2 10  9 11 1.0 5.59 3.733 -2.278 0.277 8.055 ; dihedral1
+
+; dihedral2
+ 9 11 13 12 11 1.0 195.074 158.921 -474.829 -119.133 294.332 ; dihedral2
+
+; dihedral3
+ 1  2  6  8 11 1.0 4.178 -1.97 -12.054 13.643 29.236 ; dihedral3
+
+[ virtual_sites3 ]
+ 3  5  1  2 4 0.107536 0.389780 -0.085704
+ 4  6  1  2 4 0.042659 0.376892 -0.099331
+
+[ exclusions ]
+ 1  2  3  4  5  6  8  9 10 11 
+ 2  3  4  5  6  8  9 10 11 12 13 
+ 3  4  5  6  8  9 10 11 
+ 4  5  6  7  8  9 10 11 
+ 5  6  7  8  9 10 
+ 6  7  8  9 10 
+ 7  8 
+ 9 10 11 12 13 14 
+10 11 12 13 14 
+11 12 13 14 
+12 13 14 
+13 14 

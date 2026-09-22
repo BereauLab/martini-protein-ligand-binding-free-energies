@@ -1,0 +1,43 @@
+; This file was generated using the following command:
+; /remote/au011/walter/programs/uvenv-ml/bin/ff_inter -f mapped.xtc -s mapped.tpr -i ../mapping.itp -temperature 298 -interactions comments -dists -plots -constraints 10000000 -max-dihedral 3
+; 
+
+; Please cite the following papers:
+; Kroon, P C; Grunewald, F; Barnoud, J; van Tilburg, M; Souza, P C; Wassenaar, T A; Marrink, S J;  elife 2024; 10.7554/elife.90627.2
+; {Brasnett, C; Fidlin, M; Duve, T; Thallmair, S; Marrink, S J; Grünewald, F;   {ChemRxiv  {2026;  {10.26434/chemrxiv.15001072/v1
+
+[ moleculetype ]
+ligand 1
+
+[ atoms ]
+1 SX4e 1 LIG B1 1 0.0 66.0
+2 TN4a 1 LIG B2 2 0.0  0.0
+3 TC5  1 LIG B3 3 0.0 48.0
+4 TC5  1 LIG B4 4 0.0 36.0
+5 SN3a 1 LIG B5 5 0.0 66.0
+6 TN6d 1 LIG B6 6 0.0 36.0
+
+[ bonds ]
+  1   3  1 0.467    25000.000 ; bond1 (68921.7)
+  5   6  1 0.196    25000.000 ; bond2 (357801.334)
+
+[ constraints ]
+1 4 1 0.297 100000
+1 5 1 0.550 100000
+3 4 1 0.218 100000
+3 5 1 0.328 100000
+4 5 1 0.482 100000
+
+[ angles ]
+  1   5   6  2 150.884    203.591 ; angle2
+  3   5   6  2 153.334    239.321 ; angle1
+
+[ virtual_sites3 ]
+2 1 3 5 4 0.214687 0.335853 -0.006744
+
+[ exclusions ]
+1 2 3 4 5 6 
+2 3 4 5 6 
+3 4 5 6 
+4 5 6 
+5 6 

@@ -1,0 +1,71 @@
+; This file was generated using the following command:
+; /remote/au011/walter/programs/uvenv-ml/bin/ff_inter -f mapped.xtc -s mapped.tpr -i ../mapping.itp -temperature 298 -interactions comments -dists -plots -constraints 10000000 -max-dihedral 3
+; 
+
+; Please cite the following papers:
+; Kroon, P C; Grunewald, F; Barnoud, J; van Tilburg, M; Souza, P C; Wassenaar, T A; Marrink, S J;  elife 2024; 10.7554/elife.90627.2
+; {Brasnett, C; Fidlin, M; Duve, T; Thallmair, S; Marrink, S J; Grünewald, F;   {ChemRxiv  {2026;  {10.26434/chemrxiv.15001072/v1
+
+[ moleculetype ]
+ligand 1
+
+[ atoms ]
+ 1 SP2  1 LIG B1   1 0.0 72.0
+ 2 SN1   1 LIG B2   2  0.0  0.0
+ 3 TC5   1 LIG B3   3  0.0  0.0
+ 4 TC4   1 LIG B4   4  0.0 66.0
+ 5 TC5   1 LIG B5   5  0.0 48.0
+ 6 SX3   1 LIG B6   6  0.0 84.0
+ 7 SN4ah 1 LIG B7   7  0.0 54.0
+ 8 TX3   1 LIG B8   8  0.0 36.0
+ 9 TC4   1 LIG B9   9  0.0 36.0
+10 TC4   1 LIG B10 10  0.0 36.0
+11 SC5   1 LIG B11 11  0.0 54.0
+
+[ bonds ]
+  1   5  1 0.625    25000.000 ; bond5 (77732.016)
+  4   7  1 0.255    25000.000 ; bond1 (76930.643)
+  7  11  1 0.317    25000.000 ; bond2 (30661.547)
+  8  11  1 0.334    25000.000 ; bond3 (180833.411)
+  9  10  1 0.499    25000.000 ; bond4 (53448.4)
+
+[ constraints ]
+ 1  4 1 0.353 100000
+ 1  6 1 0.640 100000
+ 4  5 1 0.391 100000
+ 4  6 1 0.558 100000
+ 5  6 1 0.300 100000
+ 8  9 1 0.262 100000
+ 8 10 1 0.269 100000
+ 9 11 1 0.350 100000
+10 11 1 0.348 100000
+
+[ angles ]
+  1   4   7  2 104.121     45.154 ; angle5
+  5   4   7  2 101.881     50.336 ; angle4
+  4   7  11  2 139.500     17.207 ; angle1
+  7  11   9  2 131.425     35.485 ; angle2
+  7  11  10  2 133.631     37.707 ; angle3
+
+[ dihedrals ]
+; dihedral1
+ 1  4  7 11 11 1.0 9.491 6.877 -1.338 -6.658 0.175 ; dihedral1
+
+; dihedral2
+ 4  7 11  9 11 1.0 26.209 3.025 -29.181 -6.185 22.224 ; dihedral2
+
+[ virtual_sites3 ]
+ 2  1  4  6 4 -0.434538 0.529225 -0.099526
+ 3  6  5  4 4 -0.228822 0.563901 -0.158874
+
+[ exclusions ]
+ 1  2  3  4  5  6  7 11 
+ 2  3  4  5  6  7 
+ 3  4  5  6  7 11 
+ 4  5  6  7  8  9 10 11 
+ 5  6  7 11 
+ 6  7 
+ 7  8  9 10 11 
+ 8  9 10 11 
+ 9 10 11 
+10 11 
